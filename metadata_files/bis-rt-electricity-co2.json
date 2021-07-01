@@ -1,0 +1,86 @@
+[
+  {
+    "content": {
+      "@type": "dcat:Dataset",
+      "@context": {
+        "dcat": "http://www.w3.org/ns/dcat#",
+        "dct": "http://purl.org/dc/terms/",
+        "oe": "http://energydata.org.uk/oe/terms/"
+      },
+      "dct:title": "Real-time electricity (CO2) data for BIS headquarters building",
+      "dct:description": "This is open data, we are presenting it as shared for beta testing purposes. Real-time CO2 consumption data for the Department for Business, Innovation & Skills headquarters building 1 Victoria Street, London, SW1H 0ET. The data is captured every 30 min, resulting in 48 capture points for each day. Note that the data is updated once per day at approx. 2pm. Electricity CO2 Conversion Factor of 0.307kg CO2 per kWh",
+      "dcat:version": "0.1.2",
+      "dcat:versionNotes": "Version of the dataset from 22nd of June found on http://search-beta.energydata.org.uk/dataset/real-time-energy-and-co2-data-for-bis-headquarters-building/resource/8d69bdae-d58c-4939-b42c-0f8f51989c44",
+      "oe:sensitivityClass": "OE-SA",
+      "oe:dataSetStableIdentifier": "bis-rt-electricity-co2"
+    },
+    "access": [
+      {
+        "rule": "oe:verified and oe:last_update within 60 days grants oe:use",
+        "sufficient": true,
+        "appliesFrom": "2021-04-22T00:00:00.000Z",
+        "appliesTo": "2022-04-22T00:00:00.000Z"
+      },
+      {
+        "rule": "oe:groups:some_group grants oe:use, oe:redistribute, oe:aggregate",
+        "sufficient": false,
+        "appliesFrom": "2021-04-22T00:00:00.000Z",
+        "appliesTo": "2022-04-22T00:00:00.000Z"
+      }
+    ],
+    "transport": {
+      "http": {
+        "openapi": "3.0.0",
+        "info": {
+          "title": "Sample API",
+          "description": "CSV format data",
+          "version": "0.1.0"
+        },
+        "servers": [
+          {
+            "url": "http://example.energydata.org.uk",
+            "description": "Open Energy's Example Data Provider"
+          }
+        ],
+        "paths": {
+          "/data": {
+            "get": {
+              "summary": "Returns a CSV containing all the data",
+              "description": "If we had any more to describe, we'd do it here"
+            },
+            "responses": {
+              "200": {
+                "description": "CSV data stream"
+              }
+            }
+          }
+        }
+      }
+    },
+    "representation": {
+      "mime": "text/csv",
+      "csvw": {
+        "@context": "http://www.w3.org/ns/csvw",
+        "tableSchema": {
+          "columns": [
+            {
+              "titles": "site_name"
+            },
+            {
+              "titles": "utility"
+            },
+            {
+              "titles": "type"
+            },
+            {
+              "titles": "date"
+            },
+            {
+              "titles": "electricity_kgco2"
+            }
+          ]
+        }
+      }
+    }
+  }
+]
