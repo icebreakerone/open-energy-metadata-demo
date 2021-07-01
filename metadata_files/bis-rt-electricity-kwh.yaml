@@ -38,7 +38,7 @@
         - url: 'http://example.energydata.org.uk'
           description: Open Energy's Example Data Provider
       paths:
-        /data/tidy_DYTS01_kWh:
+        /tidy_DYTS01_kWh:
           get:
             summary: Returns a CSV containing all the data
             description: 'If we had any more to describe, we''d do it here'
@@ -82,7 +82,7 @@
         - url: http://example.energydata.org.uk
           description: Open Energy's Example Data Provider
       paths:
-        "/data/tidy_DYTS02_kWh":
+        "/tidy_DYTS02_kWh":
           get:
             summary: Returns a CSV containing all the data
             responses:

@@ -43,7 +43,7 @@
           }
         ],
         "paths": {
-          "/data/tidy_DYTS01_CO2": {
+          "/tidy_DYTS01_CO2": {
             "get": {
               "summary": "Returns a CSV containing all the data",
               "description": "If we had any more to describe, we'd do it here"
