@@ -35,7 +35,7 @@
         description: CSV format data
         version: 0.1.0
       servers:
-        - url: 'http://example.energydata.org.uk'
+        - url: 'https://example.energydata.org.uk'
           description: Open Energy's Example Data Provider
       paths:
         /tidy_DYTS01_kWh:
@@ -79,7 +79,7 @@
         description: CSV format data
         version: 0.1.0
       servers:
-        - url: http://example.energydata.org.uk
+        - url: 'https://example.energydata.org.uk'
           description: Open Energy's Example Data Provider
       paths:
         "/tidy_DYTS02_kWh":

@@ -38,7 +38,7 @@
         },
         "servers": [
           {
-            "url": "http://example.energydata.org.uk",
+            "url": "https://example.energydata.org.uk",
             "description": "Open Energy's Example Data Provider"
           }
         ],
