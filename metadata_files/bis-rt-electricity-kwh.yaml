@@ -70,7 +70,14 @@
     oe:sensitivityClass: OE-SA
     oe:dataSetStableIdentifier: bis-rt-gas-kwh
   access:
-    # Access control and licensing information
+    - rule: 'oe:verified and oe:last_update within 60 days grants oe:use'
+      sufficient: true
+      appliesFrom: 2021-04-22T00:00:00.000Z
+      appliesTo: 2022-04-22T00:00:00.000Z
+    - rule: 'oe:groups:some_group grants oe:use, oe:redistribute, oe:aggregate'
+      sufficient: false
+      appliesFrom: 2021-04-22T00:00:00.000Z
+      appliesTo: 2022-04-22T00:00:00.000Z
   transport:
     http:
       openapi: 3.0.0
